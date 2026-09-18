@@ -79,9 +79,9 @@
     <strong>Kurzfassung:</strong>
     <ul>
       <li>„Wieder dran“, „Camper!“, „TargetLog“ und „One More Number“ speichern eigene App-Inhalte grundsätzlich lokal auf dem verwendeten Gerät.</li>
-      <li>„RedLine – Störungsanalyse“ benötigt für Anmeldung, Teamsynchronisation und Push-Benachrichtigungen ein Benutzerkonto und verwendet dafür Supabase sowie den Apple Push Notification Service.</li>
+      <li>„RedLine – Störungsanalyse“ und „Alert Line“ benötigen für Anmeldung, Teamsynchronisation und Push-Benachrichtigungen ein Benutzerkonto und verwenden dafür Supabase sowie den Apple Push Notification Service.</li>
       <li>Es gibt keine eigene Analytics-, Profiling- oder Tracking-Infrastruktur des Entwicklers.</li>
-      <li>Soweit Werbung eingesetzt wird, erfolgt dies über Google AdMob und die Google User Messaging Platform (UMP). RedLine enthält keine Werbung.</li>
+      <li>Soweit Werbung eingesetzt wird, erfolgt dies über Google AdMob und die Google User Messaging Platform (UMP). RedLine und Alert Line enthalten keine Werbung.</li>
       <li>Apple-Dienste wie iCloud, Game Center, StoreKit und Push-Benachrichtigungen werden nur für die jeweils beschriebenen Funktionen eingesetzt.</li>
     </ul>
   </div>
@@ -103,6 +103,7 @@
     <li>die iOS-App <strong>„TargetLog“</strong>,</li>
     <li>die iOS-App <strong>„One More Number“</strong>,</li>
     <li>die iOS-App <strong>„RedLine – Störungsanalyse“</strong>,</li>
+    <li>die iOS-App <strong>„Alert Line“</strong>,</li>
     <li>die zugehörigen Informationsseiten auf dieser Website.</li>
   </ul>
 
@@ -112,19 +113,19 @@
 
   <p>
     Aufgaben, Kategorien, Einstellungen und Fälligkeiten werden lokal auf dem
-    verwendeten iPhone gespeichert. Für die Grundfunktionen werden diese Inhalte
-    nicht an einen eigenen Server des Entwicklers übertragen.
+    verwendeten iPhone gespeichert. Für die Grundfunktionen werden diese
+    Inhalte nicht an einen eigenen Server des Entwicklers übertragen.
   </p>
 
   <h3>„Camper!“</h3>
 
   <p>
-    Unter anderem Gespann- und Fahrzeugdaten, Reisen, Checklisten, Inventar- und
-    Packlisten, Wartungsdaten, gespeicherte Campingplätze, persönliche Bewertungen,
-    Notizen und Einstellungen werden lokal auf dem verwendeten iPhone gespeichert.
-    Soweit die freiwillige Apple-iCloud-Synchronisation bzw. Familienfreigabe
-    genutzt wird, verarbeitet Apple die synchronisierten Inhalte im Rahmen des
-    jeweiligen iCloud-Kontos.
+    Unter anderem Gespann- und Fahrzeugdaten, Reisen, Checklisten, Inventar-
+    und Packlisten, Wartungsdaten, gespeicherte Campingplätze, persönliche
+    Bewertungen, Notizen und Einstellungen werden lokal auf dem verwendeten
+    iPhone gespeichert. Soweit die freiwillige Apple-iCloud-Synchronisation
+    bzw. Familienfreigabe genutzt wird, verarbeitet Apple die synchronisierten
+    Inhalte im Rahmen des jeweiligen iCloud-Kontos.
   </p>
 
   <h3>„TargetLog“</h3>
@@ -140,10 +141,10 @@
   <h3>„One More Number“</h3>
 
   <p>
-    „One More Number“ speichert spielbezogene Daten wie persönliche Highscores,
-    höchste erreichte Zahlen, gespielte Runden, Coins, freigeschaltete Designs,
-    Daily-Challenge-Fortschritt, Serien und Einstellungen lokal auf dem
-    verwendeten iPhone.
+    „One More Number“ speichert spielbezogene Daten wie persönliche
+    Highscores, höchste erreichte Zahlen, gespielte Runden, Coins,
+    freigeschaltete Designs, Daily-Challenge-Fortschritt, Serien und
+    Einstellungen lokal auf dem verwendeten iPhone.
   </p>
 
   <p>
@@ -152,13 +153,13 @@
     deinstalliert wird.
   </p>
 
-  <h2>4. RedLine – Benutzerkonto und Cloud-Synchronisation</h2>
+  <h2>4. RedLine und Alert Line – Benutzerkonten und Cloud-Synchronisation</h2>
 
   <p>
-    „RedLine – Störungsanalyse“ ist eine cloudgestützte Team-Anwendung. Für die
-    Nutzung der Team- und Synchronisationsfunktionen ist ein Benutzerkonto
-    erforderlich. Zur Bereitstellung dieser Funktionen wird
-    <strong>Supabase</strong> als Backend-Dienst eingesetzt.
+    „RedLine – Störungsanalyse“ und „Alert Line“ sind cloudgestützte
+    Team-Anwendungen. Für die Nutzung der Team- und Synchronisationsfunktionen
+    ist ein Benutzerkonto erforderlich. Zur Bereitstellung dieser Funktionen
+    wird <strong>Supabase</strong> als Backend-Dienst eingesetzt.
   </p>
 
   <p>Dabei können insbesondere folgende Daten verarbeitet werden:</p>
@@ -168,14 +169,16 @@
     <li>Teamzugehörigkeit, Rolle, Abteilung und in der App hinterlegter Anzeigename,</li>
     <li>konfigurierte Hallen, Anlagen, Maschinen, Abteilungen und Supportarten,</li>
     <li>Störungsmeldungen, Statusänderungen, Ursachen, Maßnahmen, Notizen und Zeitstempel,</li>
+    <li>bei Alert Line: Unternehmen, Standorte, Hallen oder Bereiche, Benutzerrollen, Alarmarten, ausgelöste Alarme, Empfangs- bzw. Rückmeldestatus und zugehörige Zeitstempel,</li>
     <li>technische Geräteinformationen und Push-Geräte-Token, soweit Push-Benachrichtigungen aktiviert wurden.</li>
   </ul>
 
   <p>
     Diese Daten werden verarbeitet, um Anmeldung, Teamverwaltung,
     geräteübergreifende Synchronisation, gemeinsame Bearbeitung von Störungen,
-    Auswertungen und Benachrichtigungen bereitzustellen. Daten eines Teams sind
-    nur für entsprechend berechtigte Teammitglieder bestimmt.
+    interne Alarmierung, Auswertungen und Benachrichtigungen bereitzustellen.
+    Daten eines Teams bzw. Unternehmens sind nur für entsprechend berechtigte
+    Mitglieder bestimmt.
   </p>
 
   <p>
@@ -213,8 +216,19 @@
     <strong>Apple Push Notification Service (APNs)</strong>. Hierfür wird ein
     gerätespezifisches Push-Token in Supabase gespeichert und der ausgewählten
     Teamzuordnung zugeordnet. Der Inhalt einer Push-Nachricht kann betriebliche
-    Angaben zur gemeldeten Störung enthalten. Push-Benachrichtigungen können in
-    den iOS-Einstellungen deaktiviert werden.
+    Angaben zur gemeldeten Störung enthalten. Push-Benachrichtigungen können
+    in den iOS-Einstellungen deaktiviert werden.
+  </p>
+
+  <p>
+    „Alert Line“ verwendet APNs zur Übermittlung interner Alarm- und
+    Evakuierungsmeldungen. Hierfür wird ebenfalls ein gerätespezifisches
+    Push-Token in Supabase gespeichert und dem jeweiligen Unternehmen,
+    Benutzerkonto sowie den berechtigten Bereichen oder Rollen zugeordnet.
+    Alarmmeldungen können Angaben zur Alarmart, zum betroffenen Standort oder
+    Bereich und zu erforderlichen Maßnahmen enthalten. Die tatsächliche
+    Zustellung hängt unter anderem von Gerät, Netzwerkverbindung und den
+    iOS-Benachrichtigungseinstellungen ab.
   </p>
 
   <h2>7. Werbung mit Google AdMob</h2>
@@ -245,8 +259,8 @@
 
   <p>
     <strong>
-      RedLine enthält keine Werbung und verwendet weder Google AdMob noch
-      Werbe-Tracking.
+      RedLine und Alert Line enthalten keine Werbung und verwenden weder
+      Google AdMob noch Werbe-Tracking.
     </strong>
   </p>
 
@@ -318,9 +332,10 @@
 
   <p>
     Bei der Nutzung externer Dienste können technisch erforderliche Daten wie
-    IP-Adresse, Zeitpunkt, Betriebssystem- und Geräteinformationen sowie Fehler-
-    oder Diagnoseinformationen verarbeitet werden. Umfang, Dauer und Zweck
-    richten sich nach dem jeweiligen Dienst und den Einstellungen des Nutzers.
+    IP-Adresse, Zeitpunkt, Betriebssystem- und Geräteinformationen sowie
+    Fehler- oder Diagnoseinformationen verarbeitet werden. Umfang, Dauer und
+    Zweck richten sich nach dem jeweiligen Dienst und den Einstellungen des
+    Nutzers.
   </p>
 
   <h2>12. Rechtsgrundlagen</h2>
@@ -338,20 +353,21 @@
 
   <p>
     Lokal gespeicherte Daten können durch Löschen der betreffenden Inhalte oder
-    der App entfernt werden. Cloud-Daten von „RedLine“ werden grundsätzlich so
-    lange gespeichert, wie sie für das Benutzerkonto, das zugehörige Team und
-    die angebotenen Funktionen benötigt werden oder gesetzliche
-    Aufbewahrungspflichten bestehen.
+    der App entfernt werden. Cloud-Daten von „RedLine“ und „Alert Line“ werden
+    grundsätzlich so lange gespeichert, wie sie für das Benutzerkonto, das
+    zugehörige Team bzw. Unternehmen und die angebotenen Funktionen benötigt
+    werden oder gesetzliche Aufbewahrungspflichten bestehen.
   </p>
 
   <p>
-    Nutzer können die Löschung ihres RedLine-Kontos und der damit verbundenen
-    personenbezogenen Daten über den im
+    Nutzer können die Löschung ihres RedLine- oder Alert-Line-Kontos und der
+    damit verbundenen personenbezogenen Daten über den im
     <a href="impressum.html">Impressum</a> genannten Kontakt verlangen.
-    Teambezogene Betriebsdaten können nach Entfernung eines einzelnen Kontos
-    erhalten bleiben, soweit dies für die Funktionsfähigkeit und Dokumentation
-    des Teams erforderlich ist; der Personenbezug wird dabei soweit möglich
-    entfernt oder eingeschränkt.
+    Team- oder unternehmensbezogene Betriebs- und Alarmdaten können nach
+    Entfernung eines einzelnen Kontos erhalten bleiben, soweit dies für die
+    Funktionsfähigkeit, Nachvollziehbarkeit und Dokumentation erforderlich
+    ist; der Personenbezug wird dabei soweit möglich entfernt oder
+    eingeschränkt.
   </p>
 
   <h2>14. Datenübermittlung in Drittländer</h2>
@@ -371,18 +387,18 @@
     insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung
     der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine erteilte
     Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden.
-    Zudem besteht das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde
-    zu beschweren.
+    Zudem besteht das Recht, sich bei einer zuständigen
+    Datenschutzaufsichtsbehörde zu beschweren.
   </p>
 
   <h2>16. Sicherheit</h2>
 
   <p>
-    Es werden angemessene technische und organisatorische Maßnahmen eingesetzt,
-    um personenbezogene Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu
-    schützen. Nutzer sind dafür verantwortlich, ihre Zugangsdaten vertraulich
-    zu behandeln und Team-Einladungscodes nur an berechtigte Personen
-    weiterzugeben.
+    Es werden angemessene technische und organisatorische Maßnahmen
+    eingesetzt, um personenbezogene Daten vor Verlust, Missbrauch und
+    unbefugtem Zugriff zu schützen. Nutzer sind dafür verantwortlich, ihre
+    Zugangsdaten vertraulich zu behandeln und Team- bzw.
+    Unternehmens-Einladungscodes nur an berechtigte Personen weiterzugeben.
   </p>
 
   <h2>17. Änderungen dieser Datenschutzerklärung</h2>
