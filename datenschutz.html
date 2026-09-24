@@ -73,13 +73,13 @@
 <main>
 
   <h1>Datenschutzerklärung</h1>
-  <p class="muted">Stand: 20.09.2026</p>
+  <p class="muted">Stand: 24.09.2026</p>
 
   <div class="card">
     <strong>Kurzfassung:</strong>
     <ul>
-      <li>„Wieder dran“, „Camper!“, „TargetLog“, „One More Number“ und „ShiftTakt“ speichern eigene App-Inhalte grundsätzlich lokal auf dem verwendeten Gerät.</li>
-      <li>„RedLine – Störungsanalyse“ und „Alert Line“ benötigen für Anmeldung, Teamsynchronisation und Push-Benachrichtigungen ein Benutzerkonto und verwenden dafür Supabase sowie den Apple Push Notification Service.</li>
+      <li>„Wieder dran“, „Camper!“, „TargetLog“ und „One More Number“ speichern eigene App-Inhalte grundsätzlich lokal auf dem verwendeten Gerät. „ShiftTakt“ kann ebenfalls lokal genutzt werden; bei Nutzung eines Firmenkontos werden die hierfür vorgesehenen Firmen-, Benutzer- und Planungsdaten zusätzlich über Supabase synchronisiert.</li>
+      <li>„RedLine – Störungsanalyse“, „Alert Line“ und „ShiftTakt“ verwenden für Benutzerkonten und Team- bzw. Firmensynchronisation Supabase. RedLine und Alert Line verwenden zusätzlich den Apple Push Notification Service für die beschriebenen Benachrichtigungen.</li>
       <li>Es gibt keine eigene Analytics-, Profiling- oder Tracking-Infrastruktur des Entwicklers.</li>
       <li>Soweit Werbung eingesetzt wird, erfolgt dies über Google AdMob und die Google User Messaging Platform (UMP). Die kostenlose Version von „ShiftTakt“ kann Werbebanner enthalten; bei einer aktivierten Firmen- oder Entwicklerlizenz wird „ShiftTakt“ werbefrei genutzt. RedLine und Alert Line enthalten keine Werbung.</li>
       <li>Apple-Dienste wie iCloud, Game Center, StoreKit und Push-Benachrichtigungen werden nur für die jeweils beschriebenen Funktionen eingesetzt.</li>
@@ -152,55 +152,112 @@
 
   <p>
     „ShiftTakt“ dient der industriellen Schicht-, Einsatz- und Personalplanung.
-    In der derzeitigen Version werden insbesondere angelegte Abteilungen,
+    Auf dem verwendeten Gerät können insbesondere angelegte Abteilungen,
     Mitarbeiter- und Rollenangaben, Schichtberechtigungen, Schichtmodelle,
     Bereitschaften, Abwesenheiten wie Urlaub, Krankheit oder Schulungen,
     Qualifikationen einschließlich Gültigkeits- und Fälligkeitsdaten,
-    automatisch erzeugte Schicht- und Jahrespläne, Einstellungen sowie der
-    lokale Lizenzstatus grundsätzlich auf dem verwendeten Gerät gespeichert.
+    automatisch erzeugte Schicht- und Jahrespläne sowie Einstellungen lokal
+    gespeichert bzw. zwischengespeichert werden.
   </p>
 
   <p>
-    Personenbezogene Angaben zu Beschäftigten werden nur im Rahmen der vom
-    Nutzer selbst angelegten Planungsdaten verarbeitet. Eine Übertragung an
-    einen eigenen Server des Entwicklers findet in der derzeitigen Version
-    nicht statt. Sollte künftig eine optionale Cloud- oder Team-Synchronisation
-    angeboten werden, wird diese Datenschutzerklärung vor deren Einführung
-    entsprechend ergänzt.
+    Wird „ShiftTakt“ ohne Firmenkonto ausschließlich lokal verwendet, findet für
+    diese Planungsdaten keine Team-Synchronisation über Supabase statt. Wird ein
+    Firmenkonto verwendet, werden die für die gemeinsame Nutzung vorgesehenen
+    Firmen-, Benutzer-, Mitarbeiter-, Qualifikations-, Abwesenheits-, Schicht-
+    und Planungsdaten zusätzlich über Supabase gespeichert und zwischen
+    berechtigten Mitgliedern des jeweiligen Unternehmens synchronisiert.
+    Einzelheiten hierzu sind in Abschnitt 4 beschrieben.
+  </p>
+
+  <p>
+    Die Angabe „Krankheit“ als Abwesenheitsgrund kann einen Gesundheitsbezug
+    aufweisen. Solche Angaben werden nur verarbeitet, wenn sie von einem
+    berechtigten Nutzer im Rahmen der betrieblichen Planung eingetragen werden.
+    Das einsetzende Unternehmen ist dafür verantwortlich, dass Beschäftigtendaten
+    nur im erforderlichen und rechtlich zulässigen Umfang in „ShiftTakt“
+    eingetragen und verarbeitet werden.
   </p>
 
   <p>
     Lokal gespeicherte Daten bleiben grundsätzlich auf dem Gerät, bis sie in
     der jeweiligen App gelöscht, die App zurückgesetzt oder die App
-    deinstalliert wird.
+    deinstalliert wird. Eine Deinstallation entfernt nicht automatisch bereits
+    mit einem Firmenkonto synchronisierte Cloud-Daten.
   </p>
 
-  <h2>4. RedLine und Alert Line – Benutzerkonten und Cloud-Synchronisation</h2>
+  <h2>4. RedLine, Alert Line und ShiftTakt – Benutzerkonten und Cloud-Synchronisation</h2>
 
   <p>
-    „RedLine – Störungsanalyse“ und „Alert Line“ sind cloudgestützte
-    Team-Anwendungen. Für die Nutzung der Team- und Synchronisationsfunktionen
-    ist ein Benutzerkonto erforderlich. Zur Bereitstellung dieser Funktionen
-    wird <strong>Supabase</strong> als Backend-Dienst eingesetzt.
+    „RedLine – Störungsanalyse“, „Alert Line“ und „ShiftTakt“ stellen
+    cloudgestützte Team- bzw. Firmenfunktionen bereit. Für Anmeldung,
+    Benutzerverwaltung und geräteübergreifende Synchronisation wird
+    <strong>Supabase</strong> als Backend-Dienst eingesetzt.
   </p>
 
-  <p>Dabei können insbesondere folgende Daten verarbeitet werden:</p>
+  <h3>Benutzerkonto und Mitgliedschaft</h3>
+
+  <p>Dabei können insbesondere folgende Kontodaten verarbeitet werden:</p>
 
   <ul>
     <li>E-Mail-Adresse, Benutzer-ID sowie Anmelde- und Sitzungsinformationen,</li>
-    <li>Teamzugehörigkeit, Rolle, Abteilung und in der App hinterlegter Anzeigename,</li>
-    <li>konfigurierte Hallen, Anlagen, Maschinen, Abteilungen und Supportarten,</li>
-    <li>Störungsmeldungen, Statusänderungen, Ursachen, Maßnahmen, Notizen und Zeitstempel,</li>
-    <li>bei Alert Line: Unternehmen, Standorte, Hallen oder Bereiche, Benutzerrollen, Alarmarten, ausgelöste Alarme, Empfangs- bzw. Rückmeldestatus und zugehörige Zeitstempel,</li>
-    <li>technische Geräteinformationen und Push-Geräte-Token, soweit Push-Benachrichtigungen aktiviert wurden.</li>
+    <li>Unternehmens- bzw. Teamzugehörigkeit, Anzeigename und Benutzerrolle,</li>
+    <li>Einladungs- und Mitgliedschaftsinformationen sowie Zeitstempel technischer Vorgänge.</li>
+  </ul>
+
+  <h3>RedLine und Alert Line</h3>
+
+  <p>
+    Bei RedLine können darüber hinaus insbesondere konfigurierte Hallen,
+    Anlagen, Maschinen, Abteilungen und Supportarten sowie Störungsmeldungen,
+    Statusänderungen, Ursachen, Maßnahmen, Notizen und Zeitstempel verarbeitet
+    werden. Bei Alert Line können insbesondere Unternehmen, Standorte, Hallen
+    oder Bereiche, Benutzerrollen, Alarmarten, ausgelöste Alarme, Empfangs-
+    bzw. Rückmeldestatus und zugehörige Zeitstempel verarbeitet werden.
+  </p>
+
+  <p>
+    Soweit Push-Benachrichtigungen verwendet werden, können zusätzlich
+    technische Geräteinformationen und gerätespezifische Push-Token in
+    Supabase gespeichert und dem jeweiligen Benutzerkonto bzw. Team
+    zugeordnet werden.
+  </p>
+
+  <h3>ShiftTakt</h3>
+
+  <p>
+    Bei Nutzung eines ShiftTakt-Firmenkontos können insbesondere folgende
+    Daten in Supabase gespeichert und innerhalb des jeweiligen Unternehmens
+    synchronisiert werden:
+  </p>
+
+  <ul>
+    <li>Unternehmensname, Mitgliedschaften, Rollen und Anzeigenamen,</li>
+    <li>Mitarbeiterangaben, Funktionen, Abteilungs- und Hallenzuordnungen,</li>
+    <li>Schichtberechtigungen, Bereitschaftsberechtigungen und Qualifikationsniveau,</li>
+    <li>Qualifikationen, Schulungs-, Gültigkeits- und Fälligkeitsdaten,</li>
+    <li>Abwesenheiten wie Urlaub, Krankheit, Schulung oder sonstige Abwesenheiten,</li>
+    <li>Schicht-, Bereitschafts-, Monats- und Jahrespläne sowie zugehörige Planungsdaten,</li>
+    <li>Synchronisationsstände, Revisionsinformationen und technisch erforderliche Zeitstempel,</li>
+    <li>Lizenz- und Berechtigungsinformationen wie Tarif, Apple-Produkt-ID, Nutzerlimit, Laufzeit und Lizenzkennung.</li>
   </ul>
 
   <p>
-    Diese Daten werden verarbeitet, um Anmeldung, Teamverwaltung,
-    geräteübergreifende Synchronisation, gemeinsame Bearbeitung von Störungen,
-    interne Alarmierung, Auswertungen und Benachrichtigungen bereitzustellen.
-    Daten eines Teams bzw. Unternehmens sind nur für entsprechend berechtigte
-    Mitglieder bestimmt.
+    Diese Daten werden verarbeitet, um Anmeldung, Rollen- und
+    Berechtigungssteuerung, Firmenmitgliedschaften, gemeinsame Planung,
+    geräteübergreifende Synchronisation, Lizenzprüfung und die jeweils
+    freigeschalteten Funktionen bereitzustellen. Daten eines Teams bzw.
+    Unternehmens sind für die jeweils berechtigten Mitglieder bestimmt.
+  </p>
+
+  <p>
+    Bei der betrieblichen Nutzung von ShiftTakt können das einsetzende
+    Unternehmen und der Entwickler je nach konkreter Verarbeitung
+    unterschiedliche datenschutzrechtliche Rollen haben. Das einsetzende
+    Unternehmen ist insbesondere dafür verantwortlich, dass die in ShiftTakt
+    eingetragenen Beschäftigtendaten auf einer geeigneten Rechtsgrundlage
+    beruhen und nur Personen Zugriff erhalten, die diesen für ihre Aufgabe
+    benötigen.
   </p>
 
   <p>
@@ -278,8 +335,9 @@
     In der kostenlosen Version von <strong>„ShiftTakt“</strong> können
     Werbebanner über Google AdMob angezeigt werden. Bei einer gültigen
     Firmenlizenz oder internen Entwickler-/Team-Lizenz werden in „ShiftTakt“
-    keine Werbeanzeigen eingeblendet. Die Lizenzfreischaltung ändert nichts an
-    den lokal gespeicherten Schicht-, Mitarbeiter- oder Qualifikationsdaten.
+    keine Werbeanzeigen eingeblendet. Die Nutzung eines Firmenkontos und die
+    in Abschnitt 4 beschriebene Synchronisation können unabhängig davon
+    weiterhin stattfinden.
   </p>
 
   <p>
@@ -310,10 +368,13 @@
 
   <p>
     „One More Number“ verwendet Apple StoreKit für den optionalen In-App-Kauf
-    „Werbefrei“. „RedLine“ verwendet StoreKit für das angebotene Abonnement.
-    Käufe und Abonnements werden über Apple abgewickelt. Der Entwickler erhält
-    keine vollständigen Zahlungsdaten, sondern nur die zur Freischaltung und
-    Verwaltung erforderlichen Transaktions- und Berechtigungsinformationen.
+    „Werbefrei“. „RedLine“ und „ShiftTakt“ verwenden StoreKit für angebotene
+    Abonnements. Käufe und Abonnements werden über Apple abgewickelt. Der
+    Entwickler erhält keine vollständigen Zahlungsdaten, sondern nur die zur
+    Prüfung, Freischaltung und Verwaltung erforderlichen Transaktions- und
+    Berechtigungsinformationen. Bei „ShiftTakt“ können hierzu insbesondere
+    Produkt-ID, Transaktionskennung, Laufzeit, Abo-Status und die Zuordnung zur
+    jeweiligen Firmenlizenz serverseitig verarbeitet werden.
   </p>
 
   <h3>iCloud</h3>
@@ -384,24 +445,32 @@
   <h2>13. Speicherdauer und Löschung</h2>
 
   <p>
-    Lokal gespeicherte Daten, einschließlich der in „ShiftTakt“ angelegten
-    Planungs-, Mitarbeiter-, Qualifikations- und Schichtdaten, können durch
-    Löschen der betreffenden Inhalte oder der App entfernt werden.
-    Cloud-Daten von „RedLine“ und „Alert Line“ werden grundsätzlich so lange
-    gespeichert, wie sie für das Benutzerkonto, das zugehörige Team bzw.
-    Unternehmen und die angebotenen Funktionen benötigt werden oder gesetzliche
-    Aufbewahrungspflichten bestehen.
+    Lokal gespeicherte Daten können durch Löschen der betreffenden Inhalte oder
+    der App entfernt werden. Bei „ShiftTakt“ gilt dies für die lokale Kopie der
+    Planungs-, Mitarbeiter-, Qualifikations- und Schichtdaten. Bereits mit einem
+    Firmenkonto synchronisierte Daten werden durch eine reine Deinstallation
+    der App nicht automatisch aus der Cloud gelöscht.
   </p>
 
   <p>
-    Nutzer können die Löschung ihres RedLine- oder Alert-Line-Kontos und der
-    damit verbundenen personenbezogenen Daten über den im
-    <a href="impressum.html">Impressum</a> genannten Kontakt verlangen.
-    Team- oder unternehmensbezogene Betriebs- und Alarmdaten können nach
-    Entfernung eines einzelnen Kontos erhalten bleiben, soweit dies für die
-    Funktionsfähigkeit, Nachvollziehbarkeit und Dokumentation erforderlich
-    ist; der Personenbezug wird dabei soweit möglich entfernt oder
-    eingeschränkt.
+    Cloud-Daten von „RedLine“, „Alert Line“ und „ShiftTakt“ werden
+    grundsätzlich so lange gespeichert, wie sie für das Benutzerkonto, das
+    zugehörige Team bzw. Unternehmen, die Synchronisation, die
+    Lizenzverwaltung und die angebotenen Funktionen benötigt werden oder
+    gesetzliche Aufbewahrungspflichten bestehen.
+  </p>
+
+  <p>
+    Nutzer können die Löschung ihres Benutzerkontos und der damit verbundenen
+    personenbezogenen Daten über den im <a href="impressum.html">Impressum</a>
+    genannten Kontakt verlangen; soweit eine App eine eigene Löschfunktion
+    anbietet, kann diese ebenfalls verwendet werden. Gesetzliche oder zwingende
+    betriebliche Aufbewahrungsgründe können einer vollständigen Löschung
+    entgegenstehen. Team- oder unternehmensbezogene
+    Betriebs-, Alarm- und Planungsdaten können nach Entfernung eines einzelnen
+    Kontos erhalten bleiben, soweit dies für Funktionsfähigkeit,
+    Nachvollziehbarkeit oder betriebliche Dokumentation erforderlich ist; der
+    Personenbezug wird dabei soweit möglich entfernt oder eingeschränkt.
   </p>
 
   <h2>14. Datenübermittlung in Drittländer</h2>
