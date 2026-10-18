@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -73,7 +74,7 @@
 <main>
 
   <h1>Datenschutzerklärung</h1>
-  <p class="muted">Stand: 29.09.2026</p>
+  <p class="muted">Stand: 18.10.2026</p>
 
   <div class="card">
     <strong>Kurzfassung:</strong>
@@ -84,6 +85,13 @@
         „ShiftTakt“ kann ebenfalls lokal genutzt werden; bei Nutzung eines
         Firmenkontos werden die hierfür vorgesehenen Firmen-, Benutzer- und
         Planungsdaten zusätzlich über Supabase synchronisiert.
+      </li>
+
+      <li>
+        „Sparvanta“ nutzt ein pseudonymes Gastprofil und Cloudflare für
+        Rabattgrenzen, Suchbegriffe, Favoriten und Alarmdaten. Bei aktivierten
+        Mitteilungen verwendet die App den Apple Push Notification Service.
+        Der automatische Import von eBay-Angeboten ist derzeit deaktiviert.
       </li>
 
       <li>
@@ -140,6 +148,7 @@
     <li>die iOS-App <strong>„RedLine – Störungsanalyse“</strong>,</li>
     <li>die iOS-App <strong>„EvacPilot“</strong>,</li>
     <li>die iOS-App <strong>„ShiftTakt“</strong>,</li>
+    <li>die iOS-App <strong>„Sparvanta“</strong>,</li>
     <li>die zugehörigen Informationsseiten auf dieser Website.</li>
   </ul>
 
@@ -217,7 +226,7 @@
     berechtigten Nutzer im Rahmen der betrieblichen Planung eingetragen
     werden. Das einsetzende Unternehmen ist dafür verantwortlich, dass
     Beschäftigtendaten nur im erforderlichen und rechtlich zulässigen Umfang
-    in „ShiftTakt“ eingetragen und verarbeitet werden.
+    in „ShiftTakt“ eingetragen werden.
   </p>
 
   <p>
@@ -225,6 +234,94 @@
     der jeweiligen App gelöscht, die App zurückgesetzt oder die App
     deinstalliert wird. Eine Deinstallation entfernt nicht automatisch bereits
     mit einem Firmenkonto synchronisierte Cloud-Daten.
+  </p>
+
+
+  <h2>3a. „Sparvanta“ – Rabattalarme und Cloudflare</h2>
+
+  <h3>Funktionsweise und Gastprofil</h3>
+
+  <p>
+    „Sparvanta“ dient dazu, gemeldete Rabattangebote nach individuellen
+    Kriterien zu filtern, Angebote zu merken und auf Wunsch
+    Benachrichtigungen zu erhalten. Für die Nutzung ist keine Anmeldung
+    mit E-Mail-Adresse oder Passwort erforderlich. Stattdessen legt
+    die App ein pseudonymes Gastprofil mit einer zufälligen Kennung an.
+    Das Anmeldetoken wird auf dem iPhone im Schlüsselbund gespeichert;
+    serverseitig erfolgt die Prüfung anhand eines abgeleiteten Prüfwerts.
+  </p>
+
+  <h3>Verarbeitung bei Cloudflare</h3>
+
+  <p>
+    Für die App-Funktionen nutzt „Sparvanta“ Cloudflare Workers sowie
+    eine Cloudflare-D1-Datenbank. Dabei können insbesondere folgende
+    Informationen verarbeitet und dem Gastprofil zugeordnet werden:
+  </p>
+
+  <ul>
+    <li>pseudonyme Profilkennung und technische Anmeldeinformationen,</li>
+    <li>eingestellte Rabattgrenze und weitere App-Einstellungen,</li>
+    <li>gespeicherte Suchbegriffe und Suchfilter,</li>
+    <li>Favoriten und gemerkte Angebote,</li>
+    <li>Alarmverlauf, Benachrichtigungsstatus und Zeitstempel,</li>
+    <li>Push-Token des Geräts, sofern Mitteilungen aktiviert sind.</li>
+  </ul>
+
+  <p>
+    Bei der Verbindung zu Cloudflare können technisch erforderliche
+    Angaben wie IP-Adresse, Zeitpunkt und Verbindungs- bzw.
+    Sicherheitsinformationen verarbeitet werden. Zum Schutz vor
+    missbräuchlichen Registrierungen können aus Verbindungsdaten
+    abgeleitete, pseudonyme Merkmale zur Begrenzung der Zugriffe
+    gespeichert werden.
+  </p>
+
+  <h3>Push-Benachrichtigungen</h3>
+
+  <p>
+    Wenn Push-Mitteilungen in der App eingeschaltet und von iOS erlaubt
+    sind, verarbeitet „Sparvanta“ ein gerätespezifisches Push-Token
+    über Cloudflare und den Apple Push Notification Service (APNs).
+    Benachrichtigungen können insbesondere einen Angebotstitel,
+    einen Preis und einen gemeldeten Rabatt enthalten.
+    Die Berechtigung lässt sich jederzeit in den iOS-Einstellungen
+    ändern. In der App können Push-Mitteilungen ebenfalls deaktiviert
+    werden.
+  </p>
+
+  <h3>Angebotsquellen und externe Links</h3>
+
+  <p>
+    Angebotsinformationen können aus externen Quellen stammen.
+    Die eBay-Schnittstelle wird derzeit technisch getestet; der
+    automatische Import und die allgemeine Veröffentlichung von
+    eBay-Angeboten in der App sind bis zur erforderlichen Freigabe
+    deaktiviert. Beim freiwilligen Öffnen von Links zu externen
+    Shops oder Angebotsseiten gelten zusätzlich deren
+    Datenschutzbestimmungen.
+  </p>
+
+  <h3>Speicherdauer und Löschung</h3>
+
+  <p>
+    Die dem Gastprofil zugeordneten Daten werden grundsätzlich so lange
+    gespeichert, wie sie zur Bereitstellung der App-Funktionen benötigt
+    werden. Über die Funktion „Konto und Daten dauerhaft löschen“ in
+    den App-Einstellungen können das Gastprofil und die zugehörigen
+    Suchbegriffe, Favoriten, Alarmdaten und Push-Token aus der
+    App-Datenbank entfernt werden. Eine reine Deinstallation löscht
+    bereits auf dem Server gespeicherte Daten nicht automatisch.
+    Technisch erforderliche Sicherheitsprotokolle und gesetzliche
+    Aufbewahrungspflichten können hiervon abweichen.
+  </p>
+
+  <p>
+    Für weitere Auskunfts- oder Löschungsanfragen steht der Kontakt
+    im <a href="impressum.html">Impressum</a> zur Verfügung.
+    Ergänzende Informationen zu Cloudflare finden sich unter
+    <a href="https://www.cloudflare.com/de-de/privacypolicy/"
+       rel="noopener noreferrer">Datenschutz bei Cloudflare</a>.
   </p>
 
 
@@ -742,7 +839,7 @@
   <h2>14. Datenübermittlung in Drittländer</h2>
 
   <p>
-    Bei der Nutzung von Apple-, Google- oder Supabase-Diensten kann eine
+    Bei der Nutzung von Apple-, Google-, Cloudflare- oder Supabase-Diensten kann eine
     Verarbeitung außerhalb der Europäischen Union bzw. des Europäischen
     Wirtschaftsraums nicht vollständig ausgeschlossen werden. Die jeweiligen
     Anbieter setzen hierfür nach eigenen Angaben anwendbare Garantien wie
