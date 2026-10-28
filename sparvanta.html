@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#102b32">
+<meta name="description" content="Sparvanta von MR Digital ist eine iOS-App zur Entdeckung von Online-Angeboten und für individuell konfigurierbare Preisalarme. Derzeit im TestFlight-Testbetrieb.">
+<title>Sparvanta – Angebote entdecken | MR Digital</title>
+<style>
+:root{--night:#102b32;--night2:#193c43;--mint:#bce8d1;--green:#215f4d;--ink:#19343c;--muted:#52656a;--paper:#f5f8f5;--line:#d9e5de}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+a{color:inherit}a:focus-visible{outline:3px solid #57b493;outline-offset:4px;border-radius:4px}
+.wrap{max-width:1050px;margin:0 auto;padding:0 24px}
+header{background:var(--night);color:#eaf8ef;border-bottom:1px solid #2d5156}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px;gap:16px;flex-wrap:wrap}
+.identity{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:.02em;font-size:20px}
+.mark{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#bce8d1,#78c6aa);color:#143832;font-weight:900}
+.nav{font-size:14px;color:#c3d6d3;text-decoration:none}.nav:hover{color:#fff}
+.hero{background:radial-gradient(circle at 85% 20%,#275957 0,transparent 38%),linear-gradient(145deg,var(--night),#173d42);color:#fff;overflow:hidden}
+.hero .wrap{padding-top:78px;padding-bottom:86px}
+.kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid #587c77;border-radius:99px;padding:7px 13px;color:var(--mint);font-size:13px;font-weight:700;letter-spacing:.02em}
+.dot{width:7px;height:7px;border-radius:50%;background:#bce8d1}
+h1{font-size:clamp(42px,7vw,73px);line-height:1.07;letter-spacing:-.045em;margin:24px 0 16px;max-width:750px}
+.hero p{max-width:660px;color:#d7e9e6;font-size:clamp(17px,2vw,20px);margin:0 0 27px}
+.cta{display:inline-block;text-decoration:none;background:var(--mint);color:#18382f;padding:12px 19px;border-radius:11px;font-weight:800}
+.cta:hover{background:#d1f2df}
+.note{margin-top:19px;font-size:13px;color:#b5cfca}
+section.area{padding:72px 0 8px}
+h2{font-size:clamp(26px,4vw,35px);letter-spacing:-.025em;line-height:1.2;margin:0 0 12px}
+.intro{color:var(--muted);max-width:700px;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 12px 38px rgba(23,54,43,.035)}
+.symbol{display:grid;place-items:center;width:42px;height:42px;background:#e8f5ed;color:var(--green);border-radius:12px;font-size:23px;margin-bottom:18px}
+h3{font-size:18px;margin:0 0 8px;line-height:1.3}
+.feature p{color:var(--muted);font-size:15px;margin:0}
+.status{margin-top:46px;background:#eaf2ec;border:1px solid #ccdcd1;border-radius:20px;padding:30px;display:grid;grid-template-columns:1fr 1.5fr;gap:25px}
+.status strong{color:#235c46}
+.status p{margin:6px 0 0;color:#415a55}
+.english{margin-top:52px;border-top:1px solid var(--line);padding-top:36px}
+.english p{color:var(--muted);max-width:800px}
+footer{margin-top:76px;background:#e8eee9;padding:31px 0;color:#4c6258;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer a:hover{text-decoration:none}
+@media(max-width:720px){.hero .wrap{padding-top:58px;padding-bottom:63px}.grid{grid-template-columns:1fr}.status{grid-template-columns:1fr}section.area{padding-top:52px}footer{margin-top:52px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="identity" href="./sparvanta.html" aria-label="Sparvanta Startseite"><span class="mark" aria-hidden="true">S</span> Sparvanta</a>
+    <a class="nav" href="./index.html">MR Digital · iOS-Apps</a>
+  </div>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap">
+    <span class="kicker"><span class="dot" aria-hidden="true"></span> iOS-App · TestFlight-Testphase</span>
+    <h1 id="hero-heading">Online-Angebote.<br>Einfach im Blick.</h1>
+    <p>Sparvanta ist eine iOS-App von MR Digital, mit der Nutzer Online-Angebote entdecken, nach ihren Interessen suchen und individuelle Preisalarme konfigurieren können.</p>
+    <a class="cta" href="#funktionen">Sparvanta kennenlernen</a>
+    <div class="note">Derzeit in der Erprobung. Noch keine öffentliche App-Store-Veröffentlichung.</div>
+  </div>
+</section>
+<section class="area" id="funktionen" aria-labelledby="features-title">
+  <div class="wrap">
+    <h2 id="features-title">Für einen besseren Überblick beim Einkaufen</h2>
+    <p class="intro">Sparvanta bündelt die Suche nach interessanten Angeboten und unterstützt Nutzer dabei, auf relevante Preis- und Produktinformationen zu achten.</p>
+    <div class="grid">
+      <article class="feature"><div class="symbol" aria-hidden="true">⌕</div><h3>Angebote entdecken</h3><p>Online-Angebote übersichtlich ansehen und passende Produkte schneller finden.</p></article>
+      <article class="feature"><div class="symbol" aria-hidden="true">◎</div><h3>Individuelle Interessen</h3><p>Die Suche anhand persönlicher Interessen und Angebotskriterien eingrenzen.</p></article>
+      <article class="feature"><div class="symbol" aria-hidden="true">♧</div><h3>Preisalarme</h3><p>Benachrichtigungen zu passenden Angeboten konfigurieren. Welche Quellen nutzbar sind, hängt von den jeweiligen Freigaben ab.</p></article>
+    </div>
+    <aside class="status" aria-label="Aktueller Entwicklungsstand">
+      <div><strong>Aktueller Status</strong><h3>Testbetrieb</h3></div>
+      <p>Die App wird derzeit über TestFlight erprobt. Die Anbindung externer Händler, Produktdaten und Affiliate-Angebote für den öffentlichen Betrieb erfolgt nur nach entsprechender Prüfung und Freigabe. Diese Webseite dient momentan der Produktinformation und zeigt keine öffentlichen Händlerangebote an.</p>
+    </aside>
+    <div class="english" lang="en">
+      <h2>About Sparvanta</h2>
+      <p>Sparvanta is an iOS app developed by MR Digital for discovering online deals, browsing relevant products and configuring personalised price alerts. The app is currently in TestFlight testing and is not yet publicly available in the App Store. Retailer data feeds and affiliate links will be integrated for public use only where the required partner approvals are in place.</p>
+      <p>For publisher partnerships and enquiries: <a href="mailto:mr-digital@gmx.net?subject=Sparvanta%20Partnership">mr-digital@gmx.net</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><strong>Sparvanta</strong> · Eine iOS-App von MR Digital</div>
+    <nav aria-label="Rechtliches und Kontakt">
+      <a href="./impressum.html">Impressum</a>
+      <a href="./datenschutz.html">Datenschutz</a>
+      <a href="mailto:mr-digital@gmx.net?subject=Sparvanta">Kontakt</a>
+      <a href="./index.html">MR Digital</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
