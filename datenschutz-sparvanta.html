@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sparvanta – Datenschutz | MR Digital</title>
-<meta name="description" content="Datenschutzinformationen zur iOS-App Sparvanta – lokales Preisjournal.">
+<meta name="description" content="Datenschutzinformationen zur iOS-App Sparvanta: öffentliches Preisjournal und geschlossene TestFlight-Beta.">
 <style>
 body{font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f4f8f7;color:#172324;margin:0}
 main{max-width:800px;margin:auto;padding:32px 18px 64px}
@@ -10,12 +10,12 @@ h1,h2{line-height:1.2}h2{margin-top:32px}a{color:#086c5c}
 </style></head><body><main>
 <p><a href="./sparvanta.html">Sparvanta</a> / Datenschutz</p>
 <h1>Datenschutzhinweise zur App Sparvanta</h1>
-<p class="small">Stand: 29.10.2026 · Für Sparvanta Version 1.0 (lokales Preisjournal, Builds 25 bis 27)</p>
+<p class="small">Stand: 02.11.2026 · Öffentliche Version 1.0 (Builds 25–27) und geschlossene TestFlight-Beta 1.0.1 (Build 31)</p>
 <div class="card">
 <h2>Verantwortlicher</h2>
 <p>MR Digital · Inhaber: Markus Rittmann<br>Melm 19, 96328 Küps, Deutschland<br>
 <a href="mailto:mr-digital@gmx.net">mr-digital@gmx.net</a></p>
-<h2>Welche Daten verarbeitet die App?</h2>
+<h2>Öffentliche App-Version 1.0: Welche Daten werden verarbeitet?</h2>
 <p>In der hier beschriebenen Version von Sparvanta kannst du Produkte, selbst beobachtete Preise, Wunschpreise, Shops, Links und eigene Notizen erfassen. Diese Informationen speichert die App <strong>ausschließlich lokal auf deinem Gerät</strong>. Es gibt in dieser Version keine Registrierung, keine Cloud-Synchronisierung, keine automatische Shopabfrage, keine Werbung und keine Push-Benachrichtigungen.</p>
 <p>MR Digital erhält diese lokalen Produkte und Preisnotizen nicht über die App. Wir nutzen für diese Version keine Analyse- oder Werbe-SDKs.</p>
 <h2>Wozu und wie lange werden Daten gespeichert?</h2>
@@ -26,8 +26,13 @@ h1,h2{line-height:1.2}h2{margin-top:32px}a{color:#086c5c}
 <p>Du kannst einzelne Produkte und Preisnotizen entfernen oder unter „Info“ sämtliche lokalen Preisnotizen löschen. Für Fragen und datenschutzbezogene Anliegen kontaktiere uns unter <a href="mailto:mr-digital@gmx.net">mr-digital@gmx.net</a>.</p>
 <h2>Deine Rechte</h2>
 <p>Dir können nach Maßgabe der DSGVO insbesondere Auskunfts-, Berichtigungs-, Löschungs-, Einschränkungs- und Beschwerderechte zustehen. Die von dir lokal gespeicherten Preisnotizen sind für uns nicht zugänglich. Du kannst sie direkt auf dem iPhone löschen.</p>
+<h2>Geschlossene TestFlight-Beta 1.0.1 (Build 31): eBay-QA-Funktion</h2>
+<p>Die folgende Ergänzung betrifft <strong>ausschließlich</strong> die gesonderte, nicht öffentlich veröffentlichte TestFlight-Version 1.0.1 (Build 31). In dieser Beta lässt sich eine eBay-Suche ausschließlich manuell starten. Hierfür werden der eingegebene Suchbegriff und der gesonderte Prüfcode über eine verschlüsselte Verbindung an unseren Cloudflare-Worker übertragen. Der Prüfcode wird dort mit dem serverseitig hinterlegten Prüfwert verglichen. Es ist kein reguläres Benutzerkonto erforderlich; für die technische Absicherung der Schnittstelle wird eine Sitzungskennung verwendet.</p>
+<p>Für Suchanfragen kontaktiert der Worker die eBay Browse API und übermittelt dazu den Suchbegriff. Die angezeigten Artikeldaten und Preise stammen von eBay. Der Worker speichert zur Begrenzung wiederholter Anfragen einen Zeitstempel pro technischer Sitzungskennung in seiner Cloudflare-D1-Datenbank. Suchtreffer werden nicht in den öffentlichen Angebotsbestand importiert. Die Beta-Anwendung speichert den eingegebenen Prüfcode und die Suchtreffer nicht dauerhaft in ihrem Preisjournal.</p>
+<p>Die optionale interne Affiliate-QA prüft serverseitig, ob eBay Affiliate-URLs für die vorgesehene Kampagne zurückliefert. Die Tracking-URLs werden dabei weder an die App übermittelt noch in ihr geöffnet oder öffentlich angezeigt. Die App erhält ausschließlich die Anzahl der geprüften Artikel, der erhaltenen Affiliate-URLs und der bestätigten Kampagnenzuordnungen. Eine öffentliche Affiliate-Nutzung oder automatisierte Händlerimports sind in dieser Beta nicht aktiviert.</p>
+<p>Bei der Kommunikation mit dem Cloudflare-Worker und mit eBay können die beteiligten Dienste technische Verbindungs- und Nutzungsdaten im Rahmen ihrer jeweiligen Betriebs- und Sicherheitsprozesse verarbeiten. Die Verteilung der Beta über TestFlight erfolgt durch Apple nach dessen eigenen Datenschutzbedingungen. Fragen zum Test und zu datenschutzbezogenen Anliegen können an <a href="mailto:mr-digital@gmx.net">mr-digital@gmx.net</a> gerichtet werden.</p>
 <h2>Spätere Funktionen</h2>
-<p>Diese Erklärung beschreibt die Preisjournal-Version 1.0 (Builds 25 und 26). Künftige Versionen mit Händlerfeeds, Synchronisierung oder Benachrichtigungen erfordern eine aktualisierte Datenschutzerklärung.</p>
+<p>Künftige öffentliche Versionen mit Händlerfeeds, Affiliate-Werbung, Synchronisierung oder Benachrichtigungen erfordern eine erneute Überprüfung und gegebenenfalls Erweiterung dieser Datenschutzhinweise, bevor die Funktionen veröffentlicht werden.</p>
 <h2>Weitere Informationen</h2>
 <p><a href="./impressum.html">Impressum</a></p>
 </div></main></body></html>
